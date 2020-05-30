@@ -33,11 +33,11 @@ module.exports = grammar ({
 
     _block: $ => choice($._statement, $.expression, $.line_statement, $.comment, $.text),
 
-    for_statement: $ => seq($.startfor, repeat($._block), $.endfor),
-    startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff, repeat(seq($.elif_statement, $.text)), optional(seq($.else_statement, $.text)), whitespace_control, '%}'),
+    for_statement: $ => seq($.startfor, repeat($._block), repeat(seq($.elif_statement, $._block)), optional(seq($.else_statement, $._block)), $.endfor),
+    startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff,  whitespace_control, '%}'),
     endfor: $ => seq('{%', whitespace_control, /\s*endfor\s*/, whitespace_control, '%}'),
 
-    if_statement: $ => seq($.startif, repeat($._block), repeat(seq($.elif_statement, $.text)), optional(seq($.else_statement, $.text)), $.endif),
+    if_statement: $ => seq($.startif, repeat($._block), repeat(seq($.elif_statement, $._block)), optional(seq($.else_statement, $._block)), $.endif),
     startif: $ => seq('{%', whitespace_control, /\s*if\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endif: $ => seq('{%', whitespace_control, /\s*endif\s*/, whitespace_control, '%}'),
     else_statement: $ => seq('{%', whitespace_control, /\s*else\s*/, whitespace_control,'%}'),
@@ -47,13 +47,13 @@ module.exports = grammar ({
     startraw: $ => seq('{%', whitespace_control, /\s*raw\s*/,  whitespace_control,'%}'),
     endraw: $ => seq('{%', whitespace_control, /\s*endraw\s*/, whitespace_control,'%}'),
 
-    macro_statement: $ => seq($.startmacro, $.text, $.endmacro),
+    macro_statement: $ => seq($.startmacro, $._block, $.endmacro),
     startmacro: $ => seq('{%', whitespace_control, /\s*macro\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endmacro: $ => seq('{%', whitespace_control, /\s*endmacro\s*/, whitespace_control,'%}'),
 
     extends_statement: $ => seq('{%', whitespace_control, /\s*extends\s*/,  $.jinja_stuff,  whitespace_control,'%}'),
 
-    block_statement: $ => seq($.startblock, $.text, $.endblock),
+    block_statement: $ => seq($.startblock, $._block, $.endblock),
     startblock: $ => seq('{%', whitespace_control, /\s*block\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, optional($.jinja_stuff), whitespace_control,'%}'),
 

@@ -48,6 +48,43 @@
           }
         },
         {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "elif_statement"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_block"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "else_statement"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_block"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "endfor"
         }
@@ -71,43 +108,6 @@
         {
           "type": "SYMBOL",
           "name": "jinja_stuff"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "elif_statement"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "text"
-              }
-            ]
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "else_statement"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "text"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
         },
         {
           "type": "PATTERN",
@@ -169,7 +169,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "text"
+                "name": "_block"
               }
             ]
           }
@@ -186,7 +186,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "text"
+                  "name": "_block"
                 }
               ]
             },
@@ -385,7 +385,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "text"
+          "name": "_block"
         },
         {
           "type": "SYMBOL",
@@ -485,7 +485,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "text"
+          "name": "_block"
         },
         {
           "type": "SYMBOL",

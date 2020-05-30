@@ -8,7 +8,43 @@
       "required": true,
       "types": [
         {
+          "type": "block_statement",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "endblock",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
+          "named": true
+        },
+        {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "line_statement",
+          "named": true
+        },
+        {
+          "type": "macro_statement",
+          "named": true
+        },
+        {
+          "type": "raw_statement",
           "named": true
         },
         {
@@ -136,6 +172,14 @@
         },
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "elif_statement",
+          "named": true
+        },
+        {
+          "type": "else_statement",
           "named": true
         },
         {
@@ -277,7 +321,43 @@
       "required": true,
       "types": [
         {
+          "type": "block_statement",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "endmacro",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
+          "named": true
+        },
+        {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "line_statement",
+          "named": true
+        },
+        {
+          "type": "macro_statement",
+          "named": true
+        },
+        {
+          "type": "raw_statement",
           "named": true
         },
         {
@@ -390,23 +470,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "elif_statement",
-          "named": true
-        },
-        {
-          "type": "else_statement",
-          "named": true
-        },
-        {
           "type": "jinja_stuff",
-          "named": true
-        },
-        {
-          "type": "text",
           "named": true
         }
       ]

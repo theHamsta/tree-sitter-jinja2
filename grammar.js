@@ -29,7 +29,7 @@ module.exports = grammar ({
   name: 'jinja2',
  conflicts: $ => [
      // can be either an assignment or an block assignment
-    [$.set_statement, $._statement],
+    [$.block_set_statement, $._statement],
   ],
 
   rules: {
@@ -69,8 +69,8 @@ module.exports = grammar ({
     startfilter: $ => seq('{%', whitespace_control, /\s*filter\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endfilter: $ => seq('{%', whitespace_control, /\s*endfilter\s*/, whitespace_control,'%}'),
 
-    set_statement: $ =>  seq($.startset, $._block, $.endset),
-    startset: $ => seq('{%', whitespace_control, /\s*set\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    block_set_statement: $ =>  seq($.set_statement, $._block, $.endset),
+    set_statement: $ => seq('{%', whitespace_control, /\s*set\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endset: $ => seq('{%', whitespace_control, /\s*endset\s*/, whitespace_control,'%}'),
 
     include_statement: $ => seq('{%', whitespace_control, /\s*inclue\s*/, $.jinja_stuff, whitespace_control,'%}'),
@@ -85,8 +85,8 @@ module.exports = grammar ({
                              $.macro_statement,
                              $.call_statement,
                              $.filter_statement,
+                             $.block_set_statement,
                              $.set_statement,
-                             $.startset,
                              $.include_statement,
                              $.import_statement,
                              $.from_statement,

@@ -701,12 +701,12 @@
         }
       ]
     },
-    "set_statement": {
+    "block_set_statement": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "startset"
+          "name": "set_statement"
         },
         {
           "type": "SYMBOL",
@@ -718,7 +718,7 @@
         }
       ]
     },
-    "startset": {
+    "set_statement": {
       "type": "SEQ",
       "members": [
         {
@@ -917,11 +917,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "set_statement"
+          "name": "block_set_statement"
         },
         {
           "type": "SYMBOL",
-          "name": "startset"
+          "name": "set_statement"
         },
         {
           "type": "SYMBOL",
@@ -1087,7 +1087,7 @@
   ],
   "conflicts": [
     [
-      "set_statement",
+      "block_set_statement",
       "_statement"
     ]
   ],

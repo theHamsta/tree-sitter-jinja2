@@ -8,31 +8,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -44,47 +20,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -93,14 +33,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -115,31 +47,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -151,43 +59,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
           "named": true
         },
         {
@@ -196,14 +72,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -218,31 +86,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -254,47 +98,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -303,14 +111,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -325,31 +125,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -361,47 +137,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -410,14 +150,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -582,31 +314,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -618,47 +326,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -667,14 +339,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -689,31 +353,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -733,47 +373,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -782,14 +386,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -819,31 +415,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -863,47 +435,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -912,14 +448,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -956,31 +484,11 @@
     }
   },
   {
-    "type": "jinja_stuff",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "line_statement",
+    "type": "jinja_block",
     "named": true,
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "jinja_stuff",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "macro_statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1000,23 +508,11 @@
           "named": true
         },
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "debug_statement",
           "named": true
         },
         {
           "type": "do_statement",
-          "named": true
-        },
-        {
-          "type": "endmacro",
-          "named": true
-        },
-        {
-          "type": "expression",
           "named": true
         },
         {
@@ -1048,10 +544,6 @@
           "named": true
         },
         {
-          "type": "line_statement",
-          "named": true
-        },
-        {
           "type": "macro_statement",
           "named": true
         },
@@ -1064,19 +556,70 @@
           "named": true
         },
         {
-          "type": "startmacro",
-          "named": true
-        },
-        {
-          "type": "text",
-          "named": true
-        },
-        {
           "type": "trans_statement",
           "named": true
         },
         {
           "type": "with_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "jinja_stuff",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "jinja_stuff",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "endmacro",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "jinja_block",
+          "named": true
+        },
+        {
+          "type": "line_statement",
+          "named": true
+        },
+        {
+          "type": "startmacro",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         }
       ]
@@ -1139,31 +682,7 @@
       "required": false,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -1171,31 +690,7 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
@@ -1203,27 +698,7 @@
           "named": true
         },
         {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
-          "named": true
-        },
-        {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -1383,31 +858,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -1419,31 +870,7 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
@@ -1451,19 +878,7 @@
           "named": true
         },
         {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
           "type": "pluralize",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -1472,14 +887,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -1494,31 +901,7 @@
       "required": true,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_set_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "debug_statement",
-          "named": true
-        },
-        {
-          "type": "do_statement",
           "named": true
         },
         {
@@ -1530,47 +913,11 @@
           "named": true
         },
         {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "from_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "import_statement",
-          "named": true
-        },
-        {
-          "type": "include_statement",
+          "type": "jinja_block",
           "named": true
         },
         {
           "type": "line_statement",
-          "named": true
-        },
-        {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        },
-        {
-          "type": "set_statement",
           "named": true
         },
         {
@@ -1579,14 +926,6 @@
         },
         {
           "type": "text",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]

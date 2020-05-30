@@ -702,8 +702,21 @@
       ]
     },
     "set_statement": {
-      "type": "SYMBOL",
-      "name": "startset"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startset"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endset"
+        }
+      ]
     },
     "startset": {
       "type": "SEQ",
@@ -908,7 +921,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "endset"
+          "name": "startset"
         },
         {
           "type": "SYMBOL",
@@ -1072,7 +1085,12 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "set_statement",
+      "_statement"
+    ]
+  ],
   "externals": [],
   "inline": [],
   "supertypes": []

@@ -31,7 +31,7 @@ module.exports = grammar ({
 
   conflicts: $ => [
      // can be either an assignment or an block assignment
-    [$.block_set_statement, $.jinja_block],
+    [$.block_set_statement, $.jinja_scope],
     [$.for_statement],
   ],
     //
@@ -39,7 +39,7 @@ module.exports = grammar ({
   rules: {
     source_file: $ => repeat($._block_statement),
     
-    _block_statement: $ => choice($.jinja_block, $.expression, $.line_statement, $.comment, $.text),
+    _block_statement: $ => choice($.jinja_scope, $.expression, $.line_statement, $.comment, $.text),
 
     for_statement: $ => seq($.startfor, block($), repeat(seq($.elif_statement, block($))), optional(seq($.else_statement, block($))), $.endfor),
     startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff,  whitespace_control, '%}'),
@@ -98,7 +98,7 @@ module.exports = grammar ({
     do_statement: $ => seq('{%', whitespace_control, /\s*do\s*/, $.jinja_stuff, whitespace_control,'%}'),
 
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
-    jinja_block: $ => choice($.for_statement,
+    jinja_scope: $ => choice($.for_statement,
                              $.if_statement,
                              $.raw_statement,
                              $.extends_statement,

@@ -20,7 +20,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -59,7 +59,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -98,7 +98,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -137,7 +137,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -326,7 +326,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -373,7 +373,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -435,7 +435,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -484,7 +484,7 @@
     }
   },
   {
-    "type": "jinja_block",
+    "type": "jinja_scope",
     "named": true,
     "fields": {},
     "children": {
@@ -607,7 +607,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -690,7 +690,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -870,7 +870,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {
@@ -913,7 +913,7 @@
           "named": true
         },
         {
-          "type": "jinja_block",
+          "type": "jinja_scope",
           "named": true
         },
         {

@@ -13,7 +13,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "jinja_block"
+          "name": "jinja_scope"
         },
         {
           "type": "SYMBOL",
@@ -1236,7 +1236,7 @@
         }
       ]
     },
-    "jinja_block": {
+    "jinja_scope": {
       "type": "CHOICE",
       "members": [
         {
@@ -1460,7 +1460,7 @@
   "conflicts": [
     [
       "block_set_statement",
-      "jinja_block"
+      "jinja_scope"
     ],
     [
       "for_statement"

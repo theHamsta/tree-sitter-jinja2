@@ -23,7 +23,7 @@
 
 //{% - if foo - %}...{% endif %}
 
-whitespace_control = /-?\+?/
+whitespace_control = /(-|\+)?/
 block = $ => repeat($._block_statement)
 
 module.exports = grammar ({

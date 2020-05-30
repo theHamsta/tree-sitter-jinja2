@@ -248,6 +248,106 @@
         }
       ]
     },
+    "extends_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*extends\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "block_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startblock"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endblock"
+        }
+      ]
+    },
+    "startblock": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*block\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endblock": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endblock\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
     "expression": {
       "type": "SEQ",
       "members": [
@@ -287,6 +387,14 @@
         {
           "type": "SYMBOL",
           "name": "raw_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "extends_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "block_statement"
         }
       ]
     },

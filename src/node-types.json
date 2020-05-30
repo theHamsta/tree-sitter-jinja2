@@ -1,5 +1,28 @@
 [
   {
+    "type": "block_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "endblock",
+          "named": true
+        },
+        {
+          "type": "startblock",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "comment",
     "named": true,
     "fields": {},
@@ -13,6 +36,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "endblock",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "endfor",
@@ -45,6 +73,21 @@
     }
   },
   {
+    "type": "extends_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "jinja_stuff",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "for_statement",
     "named": true,
     "fields": {},
@@ -52,6 +95,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "block_statement",
+          "named": true
+        },
         {
           "type": "comment",
           "named": true
@@ -62,6 +109,10 @@
         },
         {
           "type": "expression",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
           "named": true
         },
         {
@@ -100,6 +151,10 @@
       "required": true,
       "types": [
         {
+          "type": "block_statement",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -109,6 +164,10 @@
         },
         {
           "type": "expression",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
           "named": true
         },
         {
@@ -195,11 +254,19 @@
       "required": false,
       "types": [
         {
+          "type": "block_statement",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
         {
           "type": "expression",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
           "named": true
         },
         {
@@ -220,6 +287,21 @@
         },
         {
           "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "startblock",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "jinja_stuff",
           "named": true
         }
       ]

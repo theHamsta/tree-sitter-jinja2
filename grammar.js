@@ -45,8 +45,14 @@ module.exports = grammar ({
     startraw: $ => seq('{%', whitespace_control, /\s*raw\s*/,  whitespace_control,'%}'),
     endraw: $ => seq('{%', whitespace_control, /\s*endraw\s*/, whitespace_control,'%}'),
 
+    extends_statement: $ => seq('{%', whitespace_control, /\s*extends\s*/,  $.jinja_stuff,  whitespace_control,'%}'),
+
+    block_statement: $ => seq($.startblock, $.text, $.endblock),
+    startblock: $ => seq('{%', whitespace_control, /\s*block\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, whitespace_control,'%}'),
+
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
-    _statement: $ => choice($.for_statement, $.if_statement, $.raw_statement),
+    _statement: $ => choice($.for_statement, $.if_statement, $.raw_statement, $.extends_statement, $.block_statement),
     line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),
     comment: $ => seq('{#', $.rawtext, '#}'),
 

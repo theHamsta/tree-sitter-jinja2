@@ -8,7 +8,36 @@
         "name": "_block_statement"
       }
     },
+    "whitespace_control": {
+      "type": "PATTERN",
+      "value": "[-|\\+]"
+    },
     "_block_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "jinja_scope"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "line_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        }
+      ]
+    },
+    "white_space_control": {
       "type": "CHOICE",
       "members": [
         {
@@ -104,8 +133,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -116,8 +153,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -133,16 +178,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endfor\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -221,8 +282,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -233,8 +302,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -250,16 +327,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endif\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -275,16 +368,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*else\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -300,8 +409,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -312,8 +429,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -346,16 +471,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*raw\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -371,16 +512,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endraw\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -416,8 +573,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -428,8 +593,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -445,16 +618,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endmacro\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -470,8 +659,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -482,8 +679,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -519,8 +724,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -531,8 +744,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -548,8 +769,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -568,8 +797,16 @@
           ]
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -605,8 +842,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -617,8 +862,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -634,16 +887,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endcall\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -679,8 +948,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -691,8 +968,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -708,16 +993,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endfilter\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -753,8 +1054,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -765,8 +1074,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -782,16 +1099,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endset\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -807,8 +1140,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -819,8 +1160,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -836,8 +1185,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -848,8 +1205,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -865,8 +1230,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -877,8 +1250,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -914,8 +1295,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -926,8 +1315,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -943,16 +1340,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endautoescape\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1012,8 +1425,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -1024,8 +1445,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1041,16 +1470,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endtrans\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1066,16 +1511,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*pluralize\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1111,8 +1572,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -1123,8 +1592,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1140,16 +1617,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*endwith\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1165,16 +1658,32 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
           "value": "\\s*debug\\s*"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1190,8 +1699,16 @@
           "value": "{%"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",
@@ -1202,8 +1719,16 @@
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -1219,16 +1744,32 @@
           "value": "{{"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "SYMBOL",
           "name": "jinja_stuff"
         },
         {
-          "type": "PATTERN",
-          "value": "-?\\+?"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "whitespace_control"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",

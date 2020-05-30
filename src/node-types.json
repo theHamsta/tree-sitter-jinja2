@@ -173,18 +173,32 @@
   {
     "type": "debug_statement",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "do_statement",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -195,11 +209,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -208,23 +226,47 @@
   {
     "type": "else_statement",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endautoescape",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endblock",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -233,58 +275,152 @@
   {
     "type": "endcall",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endfilter",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endfor",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endif",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endmacro",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endraw",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endset",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endtrans",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "endwith",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "expression",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -295,11 +431,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -396,11 +536,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -458,11 +602,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -473,11 +621,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -628,7 +780,17 @@
   {
     "type": "pluralize",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "raw_statement",
@@ -663,11 +825,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -709,11 +875,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -724,11 +894,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -739,11 +913,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -754,11 +932,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -769,11 +951,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -784,11 +970,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -799,11 +989,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -812,18 +1006,32 @@
   {
     "type": "startraw",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "whitespace_control",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "starttrans",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -834,11 +1042,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "jinja_stuff",
+          "named": true
+        },
+        {
+          "type": "whitespace_control",
           "named": true
         }
       ]
@@ -954,6 +1166,10 @@
   {
     "type": "^#",
     "named": false
+  },
+  {
+    "type": "whitespace_control",
+    "named": true
   },
   {
     "type": "{",

@@ -559,6 +559,293 @@
         }
       ]
     },
+    "call_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startcall"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endcall"
+        }
+      ]
+    },
+    "startcall": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*call\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endcall": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endcall\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "filter_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startfilter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endfilter"
+        }
+      ]
+    },
+    "startfilter": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*filter\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endfilter": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endfilter\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "set_statement": {
+      "type": "SYMBOL",
+      "name": "startset"
+    },
+    "startset": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*set\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endset": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endset\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "include_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*inclue\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "import_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*import\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "from_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*from\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
     "expression": {
       "type": "SEQ",
       "members": [
@@ -606,6 +893,34 @@
         {
           "type": "SYMBOL",
           "name": "macro_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "call_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "filter_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "set_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endset"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "include_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "import_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "from_statement"
         },
         {
           "type": "SYMBOL",

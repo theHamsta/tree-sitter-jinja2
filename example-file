@@ -70,3 +70,26 @@ d {{
 {% else %}
     Kenny looks okay --- so far
 {% endif %}
+
+{% call render_dialog('Hello World') %}
+    This is a simple dialog rendered by using a macro and
+    a call block.
+{% endcall %}
+
+{% set navigation = 2 %}
+
+{% filter upper %}
+    This text becomes uppercase
+{% endfilter %}
+
+{% set iterated = false %}
+{% for item in seq %}
+    {{ item }}
+    {% set iterated = true %}
+{% endfor %}
+{% if not iterated %} did not iterate {% endif %}
+
+{% set navigation %}
+    <li><a href="/">Index</a>
+    <li><a href="/downloads">Downloads</a>
+{% endset %}

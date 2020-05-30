@@ -57,12 +57,35 @@ module.exports = grammar ({
     startblock: $ => seq('{%', whitespace_control, /\s*block\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, optional($.jinja_stuff), whitespace_control,'%}'),
 
+    call_statement: $ => seq($.startcall, $._block, $.endcall),
+    startcall: $ => seq('{%', whitespace_control, /\s*call\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endcall: $ => seq('{%', whitespace_control, /\s*endcall\s*/, whitespace_control,'%}'),
+
+    filter_statement: $ => seq($.startfilter, $._block, $.endfilter),
+    startfilter: $ => seq('{%', whitespace_control, /\s*filter\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endfilter: $ => seq('{%', whitespace_control, /\s*endfilter\s*/, whitespace_control,'%}'),
+
+    set_statement: $ =>  $.startset,//prec.left(2, seq($.startset, optional(seq($._block, $.endset)))),
+    startset: $ => seq('{%', whitespace_control, /\s*set\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endset: $ => seq('{%', whitespace_control, /\s*endset\s*/, whitespace_control,'%}'),
+
+    include_statement: $ => seq('{%', whitespace_control, /\s*inclue\s*/, $.jinja_stuff, whitespace_control,'%}'),
+    import_statement: $ => seq('{%', whitespace_control, /\s*import\s*/, $.jinja_stuff, whitespace_control,'%}'),
+    from_statement: $ => seq('{%', whitespace_control, /\s*from\s*/, $.jinja_stuff, whitespace_control,'%}'),
+
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
     _statement: $ => choice($.for_statement,
                              $.if_statement,
                              $.raw_statement,
                              $.extends_statement,
                              $.macro_statement,
+                             $.call_statement,
+                             $.filter_statement,
+                             $.set_statement,
+                             $.endset,
+                             $.include_statement,
+                             $.import_statement,
+                             $.from_statement,
                              $.block_statement),
 
     line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),

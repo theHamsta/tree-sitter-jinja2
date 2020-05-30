@@ -1,0 +1,23 @@
+Halllo {{ foo }} ich bims! {{ 1 }} 
+{% for a in bums %}
+dassd {{ no }}
+
+{%+ endfor %}
+{
+sssssssss
+
+ssss
+
+{% for a in bums -%}
+    {% for a in bums %}
+        {% if foo %}
+        dassd {{ no }}
+        {%- endif%}
+    da# fo
+    {% endfor %}
+# das
+{% endfor %}
+
+{%- raw %} dasd dasd d
+d {{
+{% endraw %}

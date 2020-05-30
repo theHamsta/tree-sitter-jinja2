@@ -27,7 +27,8 @@ whitespace_control = /-?\+?/
 
 module.exports = grammar ({
   name: 'jinja2',
- conflicts: $ => [
+
+  conflicts: $ => [
      // can be either an assignment or an block assignment
     [$.block_set_statement, $._statement],
   ],

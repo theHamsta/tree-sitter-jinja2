@@ -37,3 +37,35 @@ d {{
       Welcome to my awesome homepage.
     </p>
 {% endblock %}
+
+{% macro input(name, value='', type='text', size=20) -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value|e }}" size="{{ size }}">
+{%- endmacro %}
+
+<ul>
+{% for user in users %}
+    <li>{{ user.username|e }}</li>
+{% else %}
+    <li><em>no users found</em></li>
+{% endfor %}
+</ul>
+
+{% macro input(name, value='', type='text', size=20) -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value|e }}" size="{{ size }}">
+{%- endmacro %}
+
+{% if kenny.sick %}
+    Kenny is sick.
+{% elif kenny.dead %}
+    You killed Kenny!  You bastard!!!
+{% elif kenny.dead %}
+    You killed Kenny!  You bastard!!!
+{% else %}
+    Kenny looks okay --- so far
+{% endif %}
+
+{% if kenny.sick %}
+    Kenny is sick.
+{% else %}
+    Kenny looks okay --- so far
+{% endif %}

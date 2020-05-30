@@ -34,16 +34,22 @@ module.exports = grammar ({
     _block: $ => choice($._statement, $.expression, $.line_statement, $.comment, $.text),
 
     for_statement: $ => seq($.startfor, repeat($._block), $.endfor),
-    startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff, whitespace_control, '%}'),
+    startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff, repeat(seq($.elif_statement, $.text)), optional(seq($.else_statement, $.text)), whitespace_control, '%}'),
     endfor: $ => seq('{%', whitespace_control, /\s*endfor\s*/, whitespace_control, '%}'),
 
-    if_statement: $ => seq($.startif, repeat($._block), $.endif),
+    if_statement: $ => seq($.startif, repeat($._block), repeat(seq($.elif_statement, $.text)), optional(seq($.else_statement, $.text)), $.endif),
     startif: $ => seq('{%', whitespace_control, /\s*if\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endif: $ => seq('{%', whitespace_control, /\s*endif\s*/, whitespace_control, '%}'),
+    else_statement: $ => seq('{%', whitespace_control, /\s*else\s*/, whitespace_control,'%}'),
+    elif_statement: $ => seq('{%', whitespace_control, /\s*elif\s*/, $.jinja_stuff, whitespace_control,'%}'),
 
     raw_statement: $ => seq($.startraw, $.rawtext, $.endraw),
     startraw: $ => seq('{%', whitespace_control, /\s*raw\s*/,  whitespace_control,'%}'),
     endraw: $ => seq('{%', whitespace_control, /\s*endraw\s*/, whitespace_control,'%}'),
+
+    macro_statement: $ => seq($.startmacro, $.text, $.endmacro),
+    startmacro: $ => seq('{%', whitespace_control, /\s*macro\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endmacro: $ => seq('{%', whitespace_control, /\s*endmacro\s*/, whitespace_control,'%}'),
 
     extends_statement: $ => seq('{%', whitespace_control, /\s*extends\s*/,  $.jinja_stuff,  whitespace_control,'%}'),
 
@@ -52,7 +58,13 @@ module.exports = grammar ({
     endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, optional($.jinja_stuff), whitespace_control,'%}'),
 
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
-    _statement: $ => choice($.for_statement, $.if_statement, $.raw_statement, $.extends_statement, $.block_statement),
+    _statement: $ => choice($.for_statement,
+                             $.if_statement,
+                             $.raw_statement,
+                             $.extends_statement,
+                             $.macro_statement,
+                             $.block_statement),
+
     line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),
     comment: $ => seq('{#', $.rawtext, '#}'),
 

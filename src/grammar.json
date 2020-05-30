@@ -73,6 +73,43 @@
           "name": "jinja_stuff"
         },
         {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "elif_statement"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "else_statement"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "text"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "PATTERN",
           "value": "-?\\+?"
         },
@@ -120,6 +157,43 @@
             "type": "SYMBOL",
             "name": "_block"
           }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "elif_statement"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "else_statement"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "text"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "SYMBOL",
@@ -170,6 +244,60 @@
         {
           "type": "PATTERN",
           "value": "\\s*endif\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "else_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*else\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "elif_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*elif\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
         },
         {
           "type": "PATTERN",
@@ -237,6 +365,77 @@
         {
           "type": "PATTERN",
           "value": "\\s*endraw\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "macro_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startmacro"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endmacro"
+        }
+      ]
+    },
+    "startmacro": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*macro\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endmacro": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endmacro\\s*"
         },
         {
           "type": "PATTERN",
@@ -339,6 +538,18 @@
           "value": "\\s*endblock\\s*"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "jinja_stuff"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "PATTERN",
           "value": "-?\\+?"
         },
@@ -391,6 +602,10 @@
         {
           "type": "SYMBOL",
           "name": "extends_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "macro_statement"
         },
         {
           "type": "SYMBOL",

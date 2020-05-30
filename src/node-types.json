@@ -65,15 +65,23 @@
           "named": true
         },
         {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "line_statement",
           "named": true
         },
         {
-          "type": "startfor",
+          "type": "raw_statement",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "startfor",
           "named": true
         },
         {
@@ -104,15 +112,23 @@
           "named": true
         },
         {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "line_statement",
           "named": true
         },
         {
-          "type": "startif",
+          "type": "raw_statement",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "startif",
           "named": true
         },
         {
@@ -187,11 +203,19 @@
           "named": true
         },
         {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "line_statement",
           "named": true
         },
         {
-          "type": "statement",
+          "type": "raw_statement",
           "named": true
         },
         {
@@ -235,29 +259,6 @@
     "type": "startraw",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "raw_statement",
-          "named": true
-        }
-      ]
-    }
   },
   {
     "type": "text",

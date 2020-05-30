@@ -26,12 +26,12 @@
 whitespace_control = /-?\+?/
 
 module.exports = grammar ({
-  name: 'Jinja2',
+  name: 'jinja2',
 
   rules: {
     source_file: $ => repeat($._block),
 
-    _block: $ => choice($.statement, $.expression, $.line_statement, $.comment, $.text),
+    _block: $ => choice($._statement, $.expression, $.line_statement, $.comment, $.text),
 
     for_statement: $ => seq($.startfor, repeat($._block), $.endfor),
     startfor: $ => seq('{%', whitespace_control, /\s*for\s*/, $.jinja_stuff, whitespace_control, '%}'),
@@ -46,16 +46,16 @@ module.exports = grammar ({
     endraw: $ => seq('{%', whitespace_control, /\s*endraw\s*/, whitespace_control,'%}'),
 
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
-    statement: $ => choice($.for_statement, $.if_statement, $.raw_statement),
-    line_statement: $ => prec(2, seq('^#', $.jinja_stuff, optional('##'))),
+    _statement: $ => choice($.for_statement, $.if_statement, $.raw_statement),
+    line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),
     comment: $ => seq('{#', $.rawtext, '#}'),
 
     _text: $ =>  choice(/[^{}%#]+/, '{', '}', '#', '%'),
     _rawtext: $ =>  choice($._text, '{{', '}}', '{%', '%}', '{#', '#}'),
 
-    jinja_stuff: $ =>  prec.left(1, repeat1($._text)),
-    text: $ =>  prec.left(1, repeat1($._text)),
-    rawtext: $ => prec.left(1, repeat1($._rawtext)), 
+    jinja_stuff: $ =>  prec.left(2, repeat1($._text)),
+    text: $ =>  prec.left(2, repeat1($._text)),
+    rawtext: $ => prec.left(2, repeat1($._rawtext)), 
  
   }
 });

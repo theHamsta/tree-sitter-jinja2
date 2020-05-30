@@ -1,5 +1,5 @@
 {
-  "name": "Jinja2",
+  "name": "jinja2",
   "rules": {
     "source_file": {
       "type": "REPEAT",
@@ -13,7 +13,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "statement"
+          "name": "_statement"
         },
         {
           "type": "SYMBOL",
@@ -273,7 +273,7 @@
         }
       ]
     },
-    "statement": {
+    "_statement": {
       "type": "CHOICE",
       "members": [
         {
@@ -292,7 +292,7 @@
     },
     "line_statement": {
       "type": "PREC",
-      "value": 2,
+      "value": 3,
       "content": {
         "type": "SEQ",
         "members": [
@@ -396,7 +396,7 @@
     },
     "jinja_stuff": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 2,
       "content": {
         "type": "REPEAT1",
         "content": {
@@ -407,7 +407,7 @@
     },
     "text": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 2,
       "content": {
         "type": "REPEAT1",
         "content": {
@@ -418,7 +418,7 @@
     },
     "rawtext": {
       "type": "PREC_LEFT",
-      "value": 1,
+      "value": 2,
       "content": {
         "type": "REPEAT1",
         "content": {

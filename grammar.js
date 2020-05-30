@@ -49,7 +49,7 @@ module.exports = grammar ({
 
     block_statement: $ => seq($.startblock, $.text, $.endblock),
     startblock: $ => seq('{%', whitespace_control, /\s*block\s*/, $.jinja_stuff,  whitespace_control,'%}'),
-    endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, whitespace_control,'%}'),
+    endblock: $ => seq('{%', whitespace_control, /\s*endblock\s*/, optional($.jinja_stuff), whitespace_control,'%}'),
 
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
     _statement: $ => choice($.for_statement, $.if_statement, $.raw_statement, $.extends_statement, $.block_statement),

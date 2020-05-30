@@ -4,12 +4,16 @@
   "description": "Tree-sitter grammar for Jinja2 templates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tree-sitter generate && tree-sitter parse example-file"
   },
   "author": "Stephan Seitz",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "nan": "^2.14.1"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.16.7"

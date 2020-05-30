@@ -74,7 +74,7 @@ module.exports = grammar ({
     set_statement: $ => seq('{%', whitespace_control, /\s*set\s*/, $.jinja_stuff,  whitespace_control,'%}'),
     endset: $ => seq('{%', whitespace_control, /\s*endset\s*/, whitespace_control,'%}'),
 
-    include_statement: $ => seq('{%', whitespace_control, /\s*inclue\s*/, $.jinja_stuff, whitespace_control,'%}'),
+    include_statement: $ => seq('{%', whitespace_control, /\s*include\s*/, $.jinja_stuff, whitespace_control,'%}'),
     import_statement: $ => seq('{%', whitespace_control, /\s*import\s*/, $.jinja_stuff, whitespace_control,'%}'),
     from_statement: $ => seq('{%', whitespace_control, /\s*from\s*/, $.jinja_stuff, whitespace_control,'%}'),
 

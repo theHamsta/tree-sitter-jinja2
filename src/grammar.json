@@ -785,7 +785,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "\\s*inclue\\s*"
+          "value": "\\s*include\\s*"
         },
         {
           "type": "SYMBOL",

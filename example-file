@@ -14,9 +14,9 @@ ssss
         {% if foo %}
         dassd {{ no }}
         {%- endif%}
-    da# fo
+    da fo
     {% endfor %}
-# das
+ das
 {% endfor %}
 
 {%- raw %} dasd dasd d

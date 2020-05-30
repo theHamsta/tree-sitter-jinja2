@@ -23,8 +23,8 @@
 
 //{% - if foo - %}...{% endif %}
 
-maybe_whitespace_control = $ => optional($.whitespace_control)
-block = $ => repeat($._block_statement)
+var maybe_whitespace_control = $ => optional($.whitespace_control)
+var block = $ => repeat($._block_statement)
 
 module.exports = grammar ({
   name: 'jinja2',

@@ -93,3 +93,18 @@ d {{
     <li><a href="/">Index</a>
     <li><a href="/downloads">Downloads</a>
 {% endset %}
+
+
+
+{% trans book_title=book.title, author=author.name %}
+This is {{ book_title }} by {{ author }}
+{% endtrans %}
+
+To pluralize, specify both the singular and plural forms separated by the pluralize tag.
+
+{% trans count=list|length %}
+There is {{ count }} {{ name }} object.
+{% pluralize %}
+There are {{ count }} {{ name }} objects.
+{% endtrans %}
+

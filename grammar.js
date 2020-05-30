@@ -78,6 +78,22 @@ module.exports = grammar ({
     import_statement: $ => seq('{%', whitespace_control, /\s*import\s*/, $.jinja_stuff, whitespace_control,'%}'),
     from_statement: $ => seq('{%', whitespace_control, /\s*from\s*/, $.jinja_stuff, whitespace_control,'%}'),
 
+    autoescape_statement: $ => seq($.startautoescape, $._block, $.endautoescape),
+    startautoescape: $ => seq('{%', whitespace_control, /\s*autoescape\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endautoescape: $ => seq('{%', whitespace_control, /\s*endautoescape\s*/, whitespace_control,'%}'),
+
+    trans_statement: $ => seq($.starttrans, repeat($._block), optional(seq($.pluralize, $._block)), $.endtrans),
+    starttrans: $ => seq('{%', whitespace_control, /\s*trans\s*/, $.jinja_stuff,  whitespace_control, '%}'),
+    endtrans: $ => seq('{%', whitespace_control, /\s*endtrans\s*/, whitespace_control, '%}'),
+    pluralize: $ => seq('{%', whitespace_control, /\s*pluralize\s*/, whitespace_control,'%}'),
+
+    with_statement: $ => seq($.startwith, $._block, $.endwith),
+    startwith: $ => seq('{%', whitespace_control, /\s*with\s*/, $.jinja_stuff,  whitespace_control,'%}'),
+    endwith: $ => seq('{%', whitespace_control, /\s*endwith\s*/, whitespace_control,'%}'),
+
+    debug_statement: $ => seq('{%', whitespace_control, /\s*debug\s*/,  whitespace_control,'%}'),
+    do_statement: $ => seq('{%', whitespace_control, /\s*do\s*/, $.jinja_stuff, whitespace_control,'%}'),
+
     expression: $ => seq('{{', whitespace_control, $.jinja_stuff, whitespace_control,'}}'),
     _statement: $ => choice($.for_statement,
                              $.if_statement,
@@ -91,6 +107,11 @@ module.exports = grammar ({
                              $.include_statement,
                              $.import_statement,
                              $.from_statement,
+                             $.autoescape_statement,
+                             $.with_statement,
+                             $.debug_statement,
+                             $.do_statement,
+                             $.trans_statement,
                              $.block_statement),
 
     line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),

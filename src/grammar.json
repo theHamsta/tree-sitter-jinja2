@@ -859,6 +859,322 @@
         }
       ]
     },
+    "autoescape_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startautoescape"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endautoescape"
+        }
+      ]
+    },
+    "startautoescape": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*autoescape\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endautoescape": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endautoescape\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "trans_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "starttrans"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_block"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "pluralize"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_block"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endtrans"
+        }
+      ]
+    },
+    "starttrans": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*trans\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endtrans": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endtrans\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "pluralize": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*pluralize\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "with_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "startwith"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "endwith"
+        }
+      ]
+    },
+    "startwith": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*with\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "endwith": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*endwith\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "debug_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*debug\\s*"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
+    "do_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{%"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s*do\\s*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jinja_stuff"
+        },
+        {
+          "type": "PATTERN",
+          "value": "-?\\+?"
+        },
+        {
+          "type": "STRING",
+          "value": "%}"
+        }
+      ]
+    },
     "expression": {
       "type": "SEQ",
       "members": [
@@ -934,6 +1250,26 @@
         {
           "type": "SYMBOL",
           "name": "from_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "autoescape_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "with_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "debug_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "do_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "trans_statement"
         },
         {
           "type": "SYMBOL",

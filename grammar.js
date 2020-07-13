@@ -38,6 +38,7 @@ module.exports = grammar ({
 
   rules: {
     source_file: $ => repeat($._block_statement),
+    whitespace_control: _ => /[-|\+]/,
     
     _block_statement: $ => choice($.jinja_scope, $.expression, $.line_statement, $.comment, $.text),
     white_space_control: $ => choice($.jinja_scope, $.expression, $.line_statement, $.comment, $.text),
@@ -122,7 +123,7 @@ module.exports = grammar ({
     line_statement: $ => prec(3, seq('^#', $.jinja_stuff, optional('##'))),
     comment: $ => seq('{#', $.rawtext, '#}'),
 
-    //_text: $ =>  choice(/[^{}%#]+/, '{', '}', '#', '%'),
+    _text: _ =>  choice(/[^{}%#]+/, '{', '}', '#', '%'),
     _rawtext: $ =>  choice($._text, '{{', '}}', '{%', '%}', '{#', '#}'),
 
     jinja_stuff: $ =>  prec.left(2, repeat1($._text)),

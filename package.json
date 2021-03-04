@@ -2,7 +2,7 @@
   "name": "tree-sitter-jinja2",
   "version": "0.1.0",
   "description": "Tree-sitter grammar for Jinja2 templates",
-  "main": "index.js",
+  "main": "bindings/node",
   "scripts": {
     "test": "tree-sitter generate && tree-sitter parse example-file"
   },
@@ -12,10 +12,10 @@
     "nan": "^2.14.1"
   },
   "repository": {
-      "type": "git",
-      "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
+    "type": "git",
+    "url": "git://github.com/theHamsta/tree-sitter-jinja2.git"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.16.7"
+    "tree-sitter-cli": "^0.19.1"
   }
 }

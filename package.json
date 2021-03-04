@@ -9,7 +9,7 @@
   "author": "Stephan Seitz",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "nan": "^2.14.1"
+    "nan": "^2.14.2"
   },
   "repository": {
     "type": "git",

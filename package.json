@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-jinja2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tree-sitter grammar for Jinja2 templates",
   "main": "bindings/node",
   "scripts": {
